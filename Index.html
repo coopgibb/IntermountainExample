@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Intermountain Landscaping &amp; Maintenance | Eagle County, Colorado</title>
+
+  <meta
+    name="description"
+    content="High-end commercial and residential landscape installation and maintenance throughout Eagle County, Colorado."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Libre+Caslon+Display&amp;display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f2d27'/%3E%3Cpath d='M12 48 29 15l8 16 5-10 10 27H12Z' fill='%23b77745'/%3E%3Cpath d='M10 51h44' stroke='%23f2efe7' stroke-width='3'/%3E%3C/svg%3E"
+  >
+
+  <style>
+    :root {
+      --ink: #11231f;
+      --forest: #0f2d27;
+      --pine: #183b32;
+      --cream: #f3f0e8;
+      --paper: #fbfaf6;
+      --copper: #b77745;
+      --line: rgba(17, 35, 31, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1200px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 5;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .nav {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      line-height: 1.05;
+    }
+
+    .mark {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      transform: rotate(45deg);
+    }
+
+    .mark svg {
+      width: 28px;
+      transform: rotate(-45deg);
+    }
+
+    .brand strong {
+      display: block;
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+      font-size: 1.12rem;
+      letter-spacing: 0.015em;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.64rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: #f1b27d;
+    }
+
+    .nav-cta {
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .menu {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font: inherit;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 760px;
+      height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 25, 21, 0.9) 0%,
+          rgba(7, 25, 21, 0.68) 38%,
+          rgba(7, 25, 21, 0.16) 75%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(7, 25, 21, 0.7) 0%,
+          transparent 45%
+        ),
+        url("hero-landscape.png") center / cover no-repeat,
+        var(--forest);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 38%;
+      height: 5px;
+      background: var(--copper);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(800px, 75%);
+      padding: 190px 0 100px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 24px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.21em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--copper);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    h1 {
+      max-width: 950px;
+      font-size: clamp(3.4rem, 7vw, 6.8rem);
+      letter-spacing: -0.035em;
+    }
+
+    .hero-lede {
+      max-width: 620px;
+      margin: 28px 0 34px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 15px 22px;
+      background: var(--copper);
+      color: white;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: #c88a57;
+      transform: translateY(-2px);
+    }
+
+    .button svg {
+      width: 21px;
+    }
+
+    .intro {
+      padding: 105px 0;
+      background: var(--cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.45fr;
+      gap: 11vw;
+      align-items: start;
+    }
+
+    .section-kicker {
+      color: var(--copper);
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.21em;
+      text-transform: uppercase;
+    }
+
+    .intro h2,
+    .history h2,
+    .contact h2 {
+      font-size: clamp(2.55rem, 5vw, 4.7rem);
+      letter-spacing: -0.035em;
+    }
+
+    .intro p {
+      max-width: 700px;
+      margin: 0 0 20px;
+      color: #3d4a46;
+      font-size: 1.16rem;
+    }
+
+    .facts {
+      display: flex;
+      gap: 48px;
+      padding-top: 26px;
+      margin-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--forest);
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1.85rem;
+      font-weight: 400;
+    }
+
+    .fact span {
+      display: block;
+      color: #69736f;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .services {
+      padding: 118px 0;
+      background: var(--paper);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .section-head h2 {
+      max-width: 680px;
+      margin-top: 15px;
+      font-size: clamp(2.7rem, 5vw, 4.7rem);
+      letter-spacing: -0.035em;
+    }
+
+    .section-head p {
+      max-width: 360px;
+      margin: 0;
+      color: #5c6864;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .service {
+      position: relative;
+      padding: 38px 30px 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service + .service {
+      padding-left: 30px;
+      border-left: 1px solid var(--line);
+    }
+
+    .service-number {
+      color: var(--copper);
+      font-size: 0.76rem;
+      letter-spacing: 0.15em;
+    }
+
+    .service h3 {
+      margin: 38px 0 17px;
+      font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+    }
+
+    .service p {
+      margin: 0;
+      color: #5b6763;
+    }
+
+    .service ul {
+      padding: 0;
+      margin: 25px 0 0;
+      list-style: none;
+    }
+
+    .service li {
+      padding: 8px 0;
+      border-top: 1px solid rgba(17, 35, 31, 0.1);
+      font-size: 0.9rem;
+    }
+
+    .history {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      color: white;
+      background: var(--forest);
+    }
+
+    .history-image {
+      min-height: 560px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(15, 45, 39, 0.05),
+          rgba(15, 45, 39, 0.35)
+        ),
+        url("hero-landscape.png") 76% center / cover no-repeat,
+        #243b34;
+    }
+
+    .history-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 90px clamp(40px, 8vw, 120px);
+    }
+
+    .history h2 {
+      margin: 18px 0 30px;
+    }
+
+    .history p {
+      max-width: 560px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 1.08rem;
+    }
+
+    .history-signature {
+      padding-top: 24px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      color: #d6a47e;
+      font-size: 0.77rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 10vw;
+    }
+
+    .contact h2 {
+      margin: 16px 0 24px;
+    }
+
+    .contact-copy {
+      max-width: 620px;
+      color: #52605b;
+      font-size: 1.14rem;
+    }
+
+    .contact-panel {
+      padding: 38px;
+      border-top: 4px solid var(--copper);
+      background: var(--paper);
+      box-shadow: 0 18px 60px rgba(15, 45, 39, 0.08);
+    }
+
+    .contact-panel h3 {
+      margin-bottom: 20px;
+      font-size: 1.65rem;
+    }
+
+    .contact-row {
+      padding: 15px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-row span {
+      display: block;
+      color: #77817d;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .contact-row strong {
+      display: block;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 40px 0;
+      color: rgba(255, 255, 255, 0.72);
+      background: #091e1a;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      font-size: 0.78rem;
+    }
+
+    .footer strong {
+      color: white;
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    @media (max-width: 850px) {
+      .shell {
+        width: min(100% - 32px, 1200px);
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .brand strong {
+        font-size: 1rem;
+      }
+
+      .brand span {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 24px;
+        background: rgba(9, 30, 26, 0.98);
+      }
+
+      nav.open ul {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 700px;
+        height: auto;
+      }
+
+      .hero-content {
+        width: 100%;
+        padding: 170px 0 80px;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 13vw, 5.3rem);
+      }
+
+      .intro,
+      .services,
+      .contact {
+        padding: 80px 0;
+      }
+
+      .intro-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 24px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service,
+      .service + .service {
+        padding: 30px 0;
+        border-left: 0;
+      }
+
+      .service h3 {
+        margin-top: 20px;
+      }
+
+      .history {
+        grid-template-columns: 1fr;
+      }
+
+      .history-image {
+        min-height: 420px;
+      }
+
+      .history-copy {
+        padding: 70px 24px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .mark {
+        width: 36px;
+        height: 36px;
+      }
+
+      .hero-lede {
+        font-size: 1rem;
+      }
+
+      .facts {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .contact-panel {
+        padding: 28px 24px;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="nav shell">
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Intermountain Landscaping and Maintenance home"
+      >
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path
+              d="M4 31 17 7l6 12 4-7 9 19H4Z"
+              fill="#b77745"
+            />
+            <path
+              d="M5 33h30"
+              stroke="white"
+              stroke-width="1.5"
+            />
+          </svg>
+        </span>
+
+        <span>
+          <strong>Intermountain</strong>
+          <span>Landscaping &amp; Maintenance</span>
+        </span>
+      </a>
+
+      <button
+        class="menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul id="site-nav">
+          <li>
+            <a href="#services">Services</a>
+          </li>
+
+          <li>
+            <a href="#history">Our History</a>
+          </li>
+
+          <li>
+            <a class="nav-cta" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-content">
+        <p class="eyebrow">Eagle County, Colorado</p>
+
+        <h1>Landscapes that belong in the mountains.</h1>
+
+        <p class="hero-lede">
+          High-end commercial and residential landscape installation and
+          maintenance, thoughtfully designed for the elevations and seasons
+          of Eagle County.
+        </p>
+
+        <a class="button" href="#contact">
+          Discuss your property
+
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M5 12h14M14 7l5 5-5 5"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="shell intro-grid">
+        <div>
+          <p class="section-kicker">Built for this place</p>
+        </div>
+
+        <div>
+          <h2 id="intro-title">
+            Enduring outdoor spaces, cared for with precision.
+          </h2>
+
+          <p>
+            Mountain landscapes ask more of every material, planting, and
+            maintenance plan. We bring local knowledge and exacting standards
+            to properties across Eagle County.
+          </p>
+
+          <div
+            class="facts"
+            aria-label="Service area and property types"
+          >
+            <div class="fact">
+              <strong>Eagle County</strong>
+              <span>Locally focused</span>
+            </div>
+
+            <div class="fact">
+              <strong>Residential</strong>
+              <span>Private properties</span>
+            </div>
+
+            <div class="fact">
+              <strong>Commercial</strong>
+              <span>Managed grounds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="services"
+      id="services"
+      aria-labelledby="services-title"
+    >
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Our services</p>
+
+            <h2 id="services-title">
+              From first concept to every season after.
+            </h2>
+          </div>
+
+          <p>
+            A complete approach to mountain landscaping—planned carefully,
+            built correctly, and maintained consistently.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service">
+            <span class="service-number">01 / INSTALLATION</span>
+
+            <h3>Landscape Construction</h3>
+
+            <p>
+              Refined outdoor environments shaped around the architecture,
+              terrain, and way each property is used.
+            </p>
+
+            <ul>
+              <li>Planting &amp; softscapes</li>
+              <li>Stonework &amp; hardscapes</li>
+              <li>Irrigation systems</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <span class="service-number">02 / MAINTENANCE</span>
+
+            <h3>Estate &amp; Property Care</h3>
+
+            <p>
+              Attentive, reliable care that protects the landscape and keeps
+              every detail looking considered.
+            </p>
+
+            <ul>
+              <li>Seasonal property care</li>
+              <li>Turf &amp; garden maintenance</li>
+              <li>Pruning &amp; plant health</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <span class="service-number">03 / COMMERCIAL</span>
+
+            <h3>Commercial Grounds</h3>
+
+            <p>
+              Professional installation and recurring maintenance for
+              properties where presentation matters.
+            </p>
+
+            <ul>
+              <li>HOAs &amp; communities</li>
+              <li>Hospitality properties</li>
+              <li>Commercial campuses</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="history"
+      id="history"
+      aria-labelledby="history-title"
+    >
+      <div
+        class="history-image"
+        role="img"
+        aria-label="Detailed mountain stonework and native landscaping"
+      ></div>
+
+      <div class="history-copy">
+        <p class="section-kicker">Our history</p>
+
+        <h2 id="history-title">Rooted in Eagle County.</h2>
+
+        <p>
+          Intermountain Landscaping &amp; Maintenance was built on a
+          straightforward idea: exceptional landscapes come from knowing the
+          land and standing behind the work.
+        </p>
+
+        <p>
+          Our local experience informs every decision—from plants that thrive
+          at elevation to materials that weather mountain winters. The result
+          is lasting craftsmanship and dependable care, season after season.
+        </p>
+
+        <p class="history-signature">
+          Local knowledge · Lasting standards
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="contact"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+      <div class="shell contact-grid">
+        <div>
+          <p class="section-kicker">Start a conversation</p>
+
+          <h2 id="contact-title">Let’s talk about your property.</h2>
+
+          <p class="contact-copy">
+            Planning a new landscape, refining an existing one, or looking
+            for consistent property care? We welcome residential, commercial,
+            and community projects throughout Eagle County.
+          </p>
+        </div>
+
+        <aside class="contact-panel" aria-label="Service details">
+          <h3>Intermountain Landscaping &amp; Maintenance</h3>
+
+          <div class="contact-row">
+            <span>Service area</span>
+            <strong>Eagle County, Colorado</strong>
+          </div>
+
+          <div class="contact-row">
+            <span>Specialties</span>
+            <strong>
+              Installation · Maintenance · Commercial Grounds
+            </strong>
+          </div>
+
+          <div class="contact-row">
+            <span>Project types</span>
+            <strong>Residential &amp; Commercial</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer">
+      <strong>Intermountain Landscaping &amp; Maintenance</strong>
+
+      <span>Serving Eagle County, Colorado</span>
+
+      <span>
+        © <span id="year"></span> Intermountain
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.querySelector(".menu");
+    const nav = document.querySelector("nav");
+
+    button.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(open));
+    });
+
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        button.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
