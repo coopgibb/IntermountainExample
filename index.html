@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Intermountain Landscaping &amp; Maintenance | Eagle County, Colorado</title>
+  <title>
+    Intermountain Landscaping &amp; Maintenance | Eagle County, Colorado
+  </title>
 
   <meta
     name="description"
@@ -19,17 +21,10 @@
     rel="stylesheet"
   >
 
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f2d27'/%3E%3Cpath d='M12 48 29 15l8 16 5-10 10 27H12Z' fill='%23b77745'/%3E%3Cpath d='M10 51h44' stroke='%23f2efe7' stroke-width='3'/%3E%3C/svg%3E"
-  >
-
   <style>
     :root {
       --ink: #11231f;
       --forest: #0f2d27;
-      --pine: #183b32;
       --cream: #f3f0e8;
       --paper: #fbfaf6;
       --copper: #b77745;
@@ -82,6 +77,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      color: white;
       text-decoration: none;
       line-height: 1.05;
     }
@@ -103,8 +99,8 @@
     .brand strong {
       display: block;
       font-family: "Libre Caslon Display", serif;
-      font-weight: 400;
       font-size: 1.12rem;
+      font-weight: 400;
       letter-spacing: 0.015em;
     }
 
@@ -121,12 +117,13 @@
       display: flex;
       align-items: center;
       gap: 34px;
-      list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
+      list-style: none;
     }
 
     nav a {
+      color: white;
       text-decoration: none;
       font-size: 0.82rem;
       letter-spacing: 0.14em;
@@ -160,8 +157,8 @@
       height: 92vh;
       display: flex;
       align-items: flex-end;
-      color: white;
       position: relative;
+      color: white;
 
       background:
         linear-gradient(
@@ -241,14 +238,17 @@
       align-items: center;
       gap: 18px;
       padding: 15px 22px;
+      border: 0;
       background: var(--copper);
       color: white;
       text-decoration: none;
+      font: inherit;
       font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       transition: 0.2s ease;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -338,27 +338,28 @@
       letter-spacing: -0.035em;
     }
 
-    .section-head p {
-      max-width: 360px;
+    .section-head > p {
+      max-width: 380px;
       margin: 0;
       color: #5c6864;
     }
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .service {
-      position: relative;
-      padding: 38px 30px 42px 0;
-      border-bottom: 1px solid var(--line);
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: white;
     }
 
-    .service + .service {
-      padding-left: 30px;
-      border-left: 1px solid var(--line);
+    .service:nth-child(2) {
+      border-color: var(--forest);
+      background: var(--forest);
+      color: white;
     }
 
     .service-number {
@@ -368,13 +369,17 @@
     }
 
     .service h3 {
-      margin: 38px 0 17px;
-      font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+      margin: 28px 0 17px;
+      font-size: clamp(1.85rem, 3vw, 2.7rem);
     }
 
-    .service p {
+    .service > p {
       margin: 0;
       color: #5b6763;
+    }
+
+    .service:nth-child(2) > p {
+      color: rgba(255, 255, 255, 0.72);
     }
 
     .service ul {
@@ -384,9 +389,149 @@
     }
 
     .service li {
-      padding: 8px 0;
+      padding: 13px 0;
       border-top: 1px solid rgba(17, 35, 31, 0.1);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .service:nth-child(2) li {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .service li strong {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    .service li span {
+      color: #68736f;
+      font-size: 0.88rem;
+    }
+
+    .service:nth-child(2) li span {
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .service-note {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      padding: 32px 0;
+      margin-top: 24px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-note strong {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .service-note p {
+      margin: 0;
+      color: #5b6763;
+    }
+
+    .work {
+      padding: 118px 0;
+      background: #e8e5dc;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 52px;
+    }
+
+    .work-card {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(17, 35, 31, 0.12);
+      background: var(--paper);
+      box-shadow: 0 8px 28px rgba(15, 45, 39, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 38px rgba(15, 45, 39, 0.1);
+    }
+
+    .work-media {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(145deg, #25483f, #102e28);
+    }
+
+    .work-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          0deg,
+          rgba(8, 28, 23, 0.28),
+          transparent 55%
+        );
+      pointer-events: none;
+    }
+
+    .work-media img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .work-card:hover .work-media img {
+      transform: scale(1.025);
+    }
+
+    .work-placeholder {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .work-caption {
+      min-height: 112px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 22px 24px 25px;
+    }
+
+    .work-caption span {
+      color: var(--copper);
+      font-size: 0.69rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .work-caption h3 {
+      margin-top: 9px;
+      font-size: 1.45rem;
+    }
+
+    .work-guide {
+      margin: 24px 0 0;
+      color: #69736f;
+      font-size: 0.84rem;
     }
 
     .history {
@@ -444,8 +589,9 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 10vw;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 7vw;
+      align-items: start;
     }
 
     .contact h2 {
@@ -460,6 +606,7 @@
 
     .contact-panel {
       padding: 38px;
+      margin-top: 38px;
       border-top: 4px solid var(--copper);
       background: var(--paper);
       box-shadow: 0 18px 60px rgba(15, 45, 39, 0.08);
@@ -483,10 +630,145 @@
       text-transform: uppercase;
     }
 
-    .contact-row strong {
+    .contact-row strong,
+    .contact-row a {
       display: block;
       margin-top: 4px;
+      color: var(--ink);
       font-weight: 500;
+      text-decoration: none;
+    }
+
+    .contact-row a:hover {
+      color: var(--copper);
+    }
+
+    .contact-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .contact-button {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 15px;
+      border: 1px solid var(--forest);
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-button.primary {
+      background: var(--forest);
+      color: white;
+    }
+
+    .contact-button:hover {
+      border-color: var(--copper);
+      background: var(--copper);
+      color: white;
+    }
+
+    .contact-form {
+      padding: 48px;
+      background: var(--forest);
+      color: white;
+      box-shadow: 0 20px 70px rgba(15, 45, 39, 0.13);
+    }
+
+    .contact-form h3 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    .form-intro {
+      margin: 0 0 28px;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 0;
+      outline: none;
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      font: inherit;
+      font-size: 1rem;
+    }
+
+    .field select option {
+      color: var(--ink);
+    }
+
+    .field textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: rgba(255, 255, 255, 0.46);
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: #d6a47e;
+      box-shadow: 0 0 0 2px rgba(214, 164, 126, 0.18);
+    }
+
+    .form-button {
+      margin-top: 4px;
+    }
+
+    .form-note {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 0.78rem;
+    }
+
+    .form-status {
+      display: none;
+      grid-column: 1 / -1;
+      margin: 0;
+      padding: 13px 15px;
+      border-left: 3px solid var(--copper);
+      background: rgba(255, 255, 255, 0.1);
     }
 
     footer {
@@ -564,6 +846,7 @@
 
       .intro,
       .services,
+      .work,
       .contact {
         padding: 80px 0;
       }
@@ -578,7 +861,7 @@
         display: block;
       }
 
-      .section-head p {
+      .section-head > p {
         margin-top: 24px;
       }
 
@@ -586,14 +869,16 @@
         grid-template-columns: 1fr;
       }
 
-      .service,
-      .service + .service {
-        padding: 30px 0;
-        border-left: 0;
+      .service {
+        padding: 32px;
       }
 
-      .service h3 {
-        margin-top: 20px;
+      .service-note {
+        grid-template-columns: 1fr;
+      }
+
+      .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .history {
@@ -624,8 +909,27 @@
         gap: 18px;
       }
 
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
       .contact-panel {
         padding: 28px 24px;
+      }
+
+      .contact-form {
+        padding: 34px 24px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full,
+      .form-note,
+      .form-status {
+        grid-column: auto;
       }
 
       .footer {
@@ -660,6 +964,7 @@
               d="M4 31 17 7l6 12 4-7 9 19H4Z"
               fill="#b77745"
             />
+
             <path
               d="M5 33h30"
               stroke="white"
@@ -685,17 +990,10 @@
 
       <nav aria-label="Main navigation">
         <ul id="site-nav">
-          <li>
-            <a href="#services">Services</a>
-          </li>
-
-          <li>
-            <a href="#history">Our History</a>
-          </li>
-
-          <li>
-            <a class="nav-cta" href="#contact">Contact</a>
-          </li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#history">Our History</a></li>
+          <li><a class="nav-cta" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -791,56 +1089,281 @@
 
         <div class="service-grid">
           <article class="service">
-            <span class="service-number">01 / INSTALLATION</span>
+            <span class="service-number">
+              01 / PRIVATE CUSTOMERS
+            </span>
 
-            <h3>Landscape Construction</h3>
+            <h3>Residential Landscapes</h3>
 
             <p>
-              Refined outdoor environments shaped around the architecture,
-              terrain, and way each property is used.
+              Personalized installation and year-round care for primary
+              homes, mountain retreats, and private estates.
             </p>
 
             <ul>
-              <li>Planting &amp; softscapes</li>
-              <li>Stonework &amp; hardscapes</li>
-              <li>Irrigation systems</li>
+              <li>
+                <strong>Landscape installation</strong>
+
+                <span>
+                  Planting, sod, native gardens, irrigation, lighting, and
+                  complete outdoor transformations.
+                </span>
+              </li>
+
+              <li>
+                <strong>Stonework and outdoor living</strong>
+
+                <span>
+                  Walkways, patios, retaining walls, garden beds, and
+                  gathering spaces built for mountain conditions.
+                </span>
+              </li>
+
+              <li>
+                <strong>Routine property maintenance</strong>
+
+                <span>
+                  Mowing, edging, pruning, weeding, fertilization, irrigation
+                  checks, and detailed seasonal care.
+                </span>
+              </li>
+
+              <li>
+                <strong>Spring and fall cleanups</strong>
+
+                <span>
+                  Property preparation, debris removal, garden-bed care,
+                  pruning, and winterization.
+                </span>
+              </li>
+
+              <li>
+                <strong>Plant health and irrigation</strong>
+
+                <span>
+                  Proactive monitoring that protects your landscape and helps
+                  it thrive at elevation.
+                </span>
+              </li>
             </ul>
           </article>
 
           <article class="service">
-            <span class="service-number">02 / MAINTENANCE</span>
+            <span class="service-number">
+              02 / COMPANIES &amp; COMMUNITIES
+            </span>
 
-            <h3>Estate &amp; Property Care</h3>
+            <h3>Commercial Landscaping</h3>
 
             <p>
-              Attentive, reliable care that protects the landscape and keeps
-              every detail looking considered.
+              Dependable grounds services for businesses and managed
+              properties where appearance, safety, and consistency matter.
             </p>
 
             <ul>
-              <li>Seasonal property care</li>
-              <li>Turf &amp; garden maintenance</li>
-              <li>Pruning &amp; plant health</li>
-            </ul>
-          </article>
+              <li>
+                <strong>Commercial installation</strong>
 
-          <article class="service">
-            <span class="service-number">03 / COMMERCIAL</span>
+                <span>
+                  Professional landscape construction for new developments,
+                  renovations, and property upgrades.
+                </span>
+              </li>
 
-            <h3>Commercial Grounds</h3>
+              <li>
+                <strong>Scheduled grounds maintenance</strong>
 
-            <p>
-              Professional installation and recurring maintenance for
-              properties where presentation matters.
-            </p>
+                <span>
+                  Consistent mowing, edging, pruning, garden-bed care,
+                  irrigation oversight, and seasonal service.
+                </span>
+              </li>
 
-            <ul>
-              <li>HOAs &amp; communities</li>
-              <li>Hospitality properties</li>
-              <li>Commercial campuses</li>
+              <li>
+                <strong>HOAs and residential communities</strong>
+
+                <span>
+                  Cohesive care for common areas, entrances, walkways,
+                  shared grounds, and managed neighborhoods.
+                </span>
+              </li>
+
+              <li>
+                <strong>Hospitality and retail properties</strong>
+
+                <span>
+                  Detailed landscape presentation for hotels, restaurants,
+                  offices, shops, and guest-facing spaces.
+                </span>
+              </li>
+
+              <li>
+                <strong>Property manager support</strong>
+
+                <span>
+                  Responsive communication, site monitoring, project
+                  coordination, and reliable ongoing service.
+                </span>
+              </li>
             </ul>
           </article>
         </div>
+
+        <div class="service-note">
+          <strong>One standard across every property.</strong>
+
+          <p>
+            Whether caring for a private residence or managing a large
+            commercial landscape, every project is guided by the same
+            priorities: craftsmanship, consistent communication, attention
+            to detail, and solutions suited to Eagle County’s climate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="work"
+      id="work"
+      aria-labelledby="work-title"
+    >
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Our work</p>
+
+            <h2 id="work-title">
+              Crafted for mountain living.
+            </h2>
+          </div>
+
+          <p>
+            Completed residential and commercial projects—from full landscape
+            installations to the details that make a property feel finished.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <figure class="work-card">
+            <div class="work-media">
+              <span class="work-placeholder">
+                Add project photo 01
+              </span>
+
+              <img
+                src="work-1.jpg"
+                alt="Completed residential landscape installation"
+                onerror="this.style.display='none'"
+              >
+            </div>
+
+            <figcaption class="work-caption">
+              <span>Private residence</span>
+              <h3>Complete Landscape Installation</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-media">
+              <span class="work-placeholder">
+                Add project photo 02
+              </span>
+
+              <img
+                src="work-2.jpg"
+                alt="Natural stonework and outdoor living space"
+                onerror="this.style.display='none'"
+              >
+            </div>
+
+            <figcaption class="work-caption">
+              <span>Outdoor living</span>
+              <h3>Stonework &amp; Gathering Spaces</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-media">
+              <span class="work-placeholder">
+                Add project photo 03
+              </span>
+
+              <img
+                src="work-3.jpg"
+                alt="Professionally maintained commercial landscape"
+                onerror="this.style.display='none'"
+              >
+            </div>
+
+            <figcaption class="work-caption">
+              <span>Commercial</span>
+              <h3>Managed Grounds</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-media">
+              <span class="work-placeholder">
+                Add project photo 04
+              </span>
+
+              <img
+                src="work-4.jpg"
+                alt="Native mountain planting and garden beds"
+                onerror="this.style.display='none'"
+              >
+            </div>
+
+            <figcaption class="work-caption">
+              <span>Planting</span>
+              <h3>Native Gardens</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-media">
+              <span class="work-placeholder">
+                Add project photo 05
+              </span>
+
+              <img
+                src="work-5.jpg"
+                alt="Seasonal landscape maintenance work"
+                onerror="this.style.display='none'"
+              >
+            </div>
+
+            <figcaption class="work-caption">
+              <span>Maintenance</span>
+              <h3>Seasonal Property Care</h3>
+            </figcaption>
+          </figure>
+
+          <figure class="work-card">
+            <div class="work-media">
+              <span class="work-placeholder">
+                Add project photo 06
+              </span>
+
+              <img
+                src="work-6.jpg"
+                alt="Landscape lighting and stone pathway"
+                onerror="this.style.display='none'"
+              >
+            </div>
+
+            <figcaption class="work-caption">
+              <span>Details</span>
+              <h3>Lighting &amp; Pathways</h3>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="work-guide">
+          To add project photos, upload images named
+          <strong>work-1.jpg</strong> through
+          <strong>work-6.jpg</strong> beside your index.html file.
+        </p>
       </div>
     </section>
 
@@ -852,7 +1375,7 @@
       <div
         class="history-image"
         role="img"
-        aria-label="Detailed mountain stonework and native landscaping"
+        aria-label="Mountain stonework and native landscaping"
       ></div>
 
       <div class="history-copy">
@@ -887,44 +1410,218 @@
         <div>
           <p class="section-kicker">Start a conversation</p>
 
-          <h2 id="contact-title">Let’s talk about your property.</h2>
+          <h2 id="contact-title">
+            Let’s talk about your property.
+          </h2>
 
           <p class="contact-copy">
             Planning a new landscape, refining an existing one, or looking
             for consistent property care? We welcome residential, commercial,
             and community projects throughout Eagle County.
           </p>
+
+          <aside
+            class="contact-panel"
+            aria-label="Contact information"
+          >
+            <h3>Contact Us</h3>
+
+            <div class="contact-row">
+              <span>Phone</span>
+
+              <a href="tel:YOUR_PHONE_LINK">
+                YOUR_PHONE_NUMBER
+              </a>
+            </div>
+
+            <div class="contact-row">
+              <span>Email</span>
+
+              <a href="mailto:YOUR_EMAIL_ADDRESS">
+                YOUR_EMAIL_ADDRESS
+              </a>
+            </div>
+
+            <div class="contact-row">
+              <span>Service area</span>
+              <strong>Eagle County, Colorado</strong>
+            </div>
+
+            <div class="contact-row">
+              <span>Customers</span>
+              <strong>Private Residences · Companies · HOAs</strong>
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="contact-button primary"
+                href="tel:YOUR_PHONE_LINK"
+              >
+                Call Now
+              </a>
+
+              <a
+                class="contact-button"
+                href="mailto:YOUR_EMAIL_ADDRESS"
+              >
+                Email Us
+              </a>
+            </div>
+          </aside>
         </div>
 
-        <aside class="contact-panel" aria-label="Service details">
-          <h3>Intermountain Landscaping &amp; Maintenance</h3>
+        <form class="contact-form" id="contact-form">
+          <h3>Request a consultation</h3>
 
-          <div class="contact-row">
-            <span>Service area</span>
-            <strong>Eagle County, Colorado</strong>
-          </div>
+          <p class="form-intro">
+            Tell us about your property and the work you have in mind.
+          </p>
 
-          <div class="contact-row">
-            <span>Specialties</span>
-            <strong>
-              Installation · Maintenance · Commercial Grounds
-            </strong>
-          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="customer-name">
+                Your name
+              </label>
 
-          <div class="contact-row">
-            <span>Project types</span>
-            <strong>Residential &amp; Commercial</strong>
+              <input
+                id="customer-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Full name"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="customer-email">
+                Email
+              </label>
+
+              <input
+                id="customer-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="customer-phone">
+                Phone
+              </label>
+
+              <input
+                id="customer-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="(970) 000-0000"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="customer-type">
+                Customer type
+              </label>
+
+              <select
+                id="customer-type"
+                name="customer_type"
+                required
+              >
+                <option value="" selected disabled>
+                  Select one
+                </option>
+
+                <option>Private homeowner</option>
+                <option>Business or commercial property</option>
+                <option>HOA or residential community</option>
+                <option>Property manager</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="contact-reason">
+                Why are you contacting us?
+              </label>
+
+              <select
+                id="contact-reason"
+                name="reason"
+                required
+              >
+                <option value="" selected disabled>
+                  Select a service
+                </option>
+
+                <option>New landscape installation</option>
+                <option>Residential landscape maintenance</option>
+                <option>Commercial grounds maintenance</option>
+                <option>Stonework or outdoor living project</option>
+                <option>Spring or fall cleanup</option>
+                <option>Irrigation or plant health</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="customer-message">
+                Project details
+              </label>
+
+              <textarea
+                id="customer-message"
+                name="message"
+                placeholder="Tell us about the property, location, timeline, and the work you need."
+                required
+              ></textarea>
+            </div>
+
+            <button
+              class="button form-button"
+              type="submit"
+            >
+              Send inquiry
+
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h14M14 7l5 5-5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </button>
+
+            <p class="form-note">
+              Please add the business email address before activating form
+              delivery.
+            </p>
+
+            <p
+              class="form-status"
+              id="form-status"
+              role="status"
+            ></p>
           </div>
-        </aside>
+        </form>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="shell footer">
-      <strong>Intermountain Landscaping &amp; Maintenance</strong>
+      <strong>
+        Intermountain Landscaping &amp; Maintenance
+      </strong>
 
-      <span>Serving Eagle County, Colorado</span>
+      <span>
+        Serving Eagle County, Colorado
+      </span>
 
       <span>
         © <span id="year"></span> Intermountain
@@ -933,19 +1630,34 @@
   </footer>
 
   <script>
-    const button = document.querySelector(".menu");
-    const nav = document.querySelector("nav");
+    const menuButton = document.querySelector(".menu");
+    const navigation = document.querySelector("nav");
 
-    button.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      button.setAttribute("aria-expanded", String(open));
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
     });
 
     document.querySelectorAll("nav a").forEach((link) => {
       link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        button.setAttribute("aria-expanded", "false");
+        navigation.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
       });
+    });
+
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      status.style.display = "block";
+      status.textContent =
+        "This inquiry form is ready. Add the business email address to activate form delivery.";
     });
 
     document.getElementById("year").textContent =
