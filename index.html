@@ -948,11 +948,6 @@
       }
     }
 
-    /* Give the mobile hero comfortable, balanced side margins. */
-    @media (max-width: 850px) {
-      .hero > .shell { width: calc(100% - 56px); }
-    }
-
     /* Mobile refinements preserve the original desktop layout. */
     .reveal {
       opacity: 0;
@@ -1003,6 +998,18 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
+    }
+    /* Apply mobile spacing directly to the first section's text container. */
+    @media screen and (max-width: 850px) {
+      main#top > section.hero > div.shell.hero-content {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: clamp(32px, 8vw, 48px) !important;
+        padding-right: clamp(32px, 8vw, 48px) !important;
+      }
     }
   </style>
 </head>
