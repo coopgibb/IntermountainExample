@@ -948,6 +948,11 @@
       }
     }
 
+    /* Give the mobile hero comfortable, balanced side margins. */
+    @media (max-width: 850px) {
+      .hero > .shell { width: calc(100% - 56px); }
+    }
+
     /* Mobile refinements preserve the original desktop layout. */
     .reveal {
       opacity: 0;
